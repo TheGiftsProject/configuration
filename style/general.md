@@ -1,6 +1,30 @@
 # General coding conventions
+
+## Table of Contents
+
+* [The CoffeeScript Style Guide](#guide)
+    * [Code Layout](#code_layout)
+        * [Tabs or Spaces?](#tabs_or_spaces)
+        * [Maximum Line Length](#maximum_line_length)
+        * [Blank Lines](#blank_lines)
+        * [Trailing Whitespace](#trailing_whitespace)
+        * [Encoding](#encoding)
+    * [Comments](#comments)
+        * [Block Comments](#block_comments)
+        * [Inline Comments](#inline_comments)
+    * [Naming Conventions](#naming_conventions)
+    * [Functions](#functions)
+    * [Strings](#strings)
+    * [Conditionals](#conditionals)
+    * [Looping and Comprehensions](#looping_and_comprehensions)
+    * [Extending Native Objects](#extending_native_objects)
+    * [Exceptions](#exceptions)
+    * [Annotations](#annotations)
+    * [Miscellaneous](#miscellaneous)
+
 <a name="code_layout"/>
 ## Code layout
+
 <a name="tabs_or_spaces"/>
 ### Tabs or spaces
 
@@ -65,3 +89,48 @@ Do not use inline comments when they state the obvious:
 
 However, inline comments can be useful in certain scenarios:
 
+<a name="annotations"/>
+## Annotations
+
+Try and avoid annotations as much as possible and use the project task system to document
+the needed task.
+If needed though, use annotations to describe a specific action that must be taken against the
+indicated block of code.
+
+**All annotations should point to a story in the task tracking system**
+
+Write the annotation on the line immediately above the code that the annotation is describing.
+
+The annotation keyword should be followed by a colon and a space, and a descriptive note.
+
+```coffeescript
+  # FIXME: The client's current state should *not* affect payload processing.
+  resetClientState()
+  processPayload()
+```
+
+If multiple lines are required by the description, indent subsequent lines with two spaces:
+
+```coffeescript
+  # TODO: Ensure that the value returned by this call falls within a certain
+  #   range, or throw an exception.
+  analyze()
+```
+
+Annotation types:
+
+- `TODO`: describe missing functionality that should be added at a later date
+- `FIXME`: describe broken code that must be fixed
+- `OPTIMIZE`: describe code that is inefficient and may become a bottleneck
+- `HACK`: describe the use of a questionable (or ingenious) coding practice
+- `REVIEW`: describe code that should be reviewed to confirm implementation
+
+<a name="miscellaneous"/>
+## Miscellaneous
+
+`and` is preferred over `&&`.
+`or` is preferred over `||`.
+`is` is preferred over `==`.
+`not` is preferred over `!`.
+
+Avoid `return` where not required, unless the explicit return increases clarity.
