@@ -12,12 +12,6 @@
     * [Comments](#comments)
         * [Block Comments](#block_comments)
         * [Inline Comments](#inline_comments)
-    * [Naming Conventions](#naming_conventions)
-    * [Functions](#functions)
-    * [Strings](#strings)
-    * [Conditionals](#conditionals)
-    * [Looping and Comprehensions](#looping_and_comprehensions)
-    * [Extending Native Objects](#extending_native_objects)
     * [Exceptions](#exceptions)
     * [Annotations](#annotations)
     * [Miscellaneous](#miscellaneous)
@@ -89,6 +83,11 @@ Do not use inline comments when they state the obvious:
 
 However, inline comments can be useful in certain scenarios:
 
+<a name="exceptions"/>
+## Exceptions
+
+Do not suppress exceptions.
+
 <a name="annotations"/>
 ## Annotations
 
@@ -129,8 +128,11 @@ Annotation types:
 ## Miscellaneous
 
 `and` is preferred over `&&`.
+
 `or` is preferred over `||`.
+
 `is` is preferred over `==`.
+
 `not` is preferred over `!`.
 
 Avoid `return` where not required, unless the explicit return increases clarity.
