@@ -5,6 +5,7 @@
 * [The CoffeeScript Style Guide](#guide)
     * [Code Layout](#code_layout)
         * [Tabs or Spaces?](#tabs_or_spaces)
+        * [Line endings](#line_endings)
         * [Maximum Line Length](#maximum_line_length)
         * [Blank Lines](#blank_lines)
         * [Trailing Whitespace](#trailing_whitespace)
@@ -23,6 +24,16 @@
 ### Tabs or spaces
 
 Use **spaces only**, with **2 spaces** per indentation level. Never mix tabs and spaces.
+
+<a name="line_endings"/>
+### Line endings
+* Use Unix-style line endings. (*BSD/Solaris/Linux/OSX users are covered by default,
+  Windows users have to be extra careful.)
+    * If you're using Git you might want to add the following
+    configuration setting to protect your project from Windows line
+    endings creeping in:
+
+        ```$ git config --global core.autocrlf true```
 
 <a name="maximum_line_length"/>
 ### Maximum Line Length
@@ -52,16 +63,17 @@ UTF-8 is the preferred source file encoding.
 <a name="comments"/>
 ## Comments
 
-Use [TomDoc](http://tomdoc.org/) for all documentation.
-
-If modifying code that is described by an existing comment, update the comment such that it
-accurately reflects the new code. (Ideally, improve the code to obviate the need for the comment,
-and delete the comment entirely.)
-
-The first word of the comment should be capitalized, unless the first word is an identifier
-that begins with a lower-case letter.
-
-If a comment is short, the period at the end can be omitted.
+* Use [TomDoc](http://tomdoc.org/) for all documentation.
+* Write self-documenting code and ignore the rest of this section. Seriously!
+* If modifying code that is described by an existing comment, update the comment such that it
+  accurately reflects the new code. (Ideally, improve the code to obviate the need for the comment,
+  and delete the comment entirely.)
+* The first word of the comment should be capitalized, unless the first word is an identifier
+  that begins with a lower-case letter.
+* If a comment is short, the period at the end can be omitted.
+* Keep existing comments up-to-date. An outdated is worse than no comment at all.
+* Avoid writing comments to explain bad code. Refactor the code to
+  make it self-explanatory. (Do or do not - there is no try.)
 
 <a name="block_comments"/>
 ### Block Comments
